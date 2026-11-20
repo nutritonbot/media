@@ -1,0 +1,12 @@
+# Ну тритон (Нутритон) – страница бота @nu_triton_bot.
+# Открыто всем поисковым и ИИ-роботам.
+
+User-agent: *
+Allow: /
+
+# Яндекс: метки источника (?from=, utm_*) – не отдельные страницы.
+User-agent: Yandex
+Allow: /
+Clean-param: from&utm_source&utm_medium&utm_campaign&utm_content&utm_term
+
+Sitemap: https://nu-triton.app/sitemap.xml
