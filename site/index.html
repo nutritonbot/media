@@ -2,14 +2,14 @@
 <html lang="ru">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta http-equiv="Content-Security-Policy" content="default-src 'none'; img-src 'self'; style-src 'unsafe-inline'; script-src 'sha256-G/N8XELiNWbhoaqb91E55CiF2WPgTTp6Fr2guOKLsNY='; base-uri 'none'; form-action 'none'">
 <title>Ну тритон – дневник питания в Telegram: калории, витамины и минералы</title>
-<meta name="description" content="Дневник питания в Telegram: считает калории, а ещё витамины и минералы. Весь день – одним голосовым, можно текстом или фото. Подскажет, что добрать.">
+<meta name="description" content="Дневник питания в Telegram: калории, а ещё 13 витаминов, 11 минералов и омега-3. Подскажет, что съесть и что купить. Весь день – одним голосовым. Пока бесплатно.">
 <link rel="canonical" href="https://nu-triton.app/">
 <meta name="robots" content="index, follow, max-image-preview:large">
-<meta name="color-scheme" content="light dark">
-<meta name="theme-color" content="#14374A">
+<meta name="color-scheme" content="light">
+<meta name="theme-color" content="#13324A">
 <meta name="format-detection" content="telephone=no">
 <link rel="icon" href="favicon.ico" sizes="48x48">
 <link rel="icon" href="img/icon-120.png" type="image/png" sizes="120x120">
@@ -19,7 +19,7 @@
 <meta property="og:locale" content="ru_RU">
 <meta property="og:url" content="https://nu-triton.app/">
 <meta property="og:title" content="Что в еде, кроме калорий – бот «Ну тритон» в Telegram">
-<meta property="og:description" content="Считает калории, а ещё витамины и минералы. Весь день – одним голосовым. Подскажет, что добрать.">
+<meta property="og:description" content="Калории, а ещё витамины и минералы. Подскажет, что съесть и что купить. Весь день – одним голосовым.">
 <meta property="og:image" content="https://nutritonbot.github.io/media/site/img/og.jpg">
 <meta property="og:image:type" content="image/jpeg">
 <meta property="og:image:width" content="1200">
@@ -49,7 +49,7 @@
         "Ну тритон",
         "@nu_triton_bot"
       ],
-      "description": "Бесплатный дневник питания в Telegram: считает калории, а ещё витамины и минералы по нормам МР 2.3.1.0253-21. Весь день можно записать одним голосовым; бот подсказывает, что добрать.",
+      "description": "Дневник питания в Telegram: считает калории, а ещё витамины и минералы по официальным нормам на основе рекомендаций ВОЗ. Подсказывает, что съесть и что купить; весь день можно записать одним голосовым. Пока бесплатно.",
       "url": "https://nu-triton.app/",
       "installUrl": "https://t.me/nu_triton_bot",
       "sameAs": [
@@ -68,18 +68,16 @@
       },
       "image": "https://nu-triton.app/img/og.jpg",
       "screenshot": [
-        "https://nu-triton.app/img/b-hero.webp",
-        "https://nu-triton.app/img/b-step-say.webp",
-        "https://nu-triton.app/img/b-step-count.webp",
-        "https://nu-triton.app/img/b-step-shop.webp"
+        "https://nu-triton.app/img/zavtrak.webp",
+        "https://nu-triton.app/img/kcal-gory.webp",
+        "https://nu-triton.app/img/pond.webp",
+        "https://nu-triton.app/img/month.webp"
       ],
       "featureList": [
-        "Еда текстом, голосом или фото",
-        "Весь день – одним голосовым",
+        "Подсказывает, что съесть и что купить, чтобы добрать то, чего за день мало",
+        "Официальные нормы МР 2.3.1.0253-21 на основе рекомендаций ВОЗ и ФАО, проценты считает код",
+        "Весь день – одним голосовым; можно фото или текстом",
         "Калории, белки, жиры, углеводы и 25 нутриентов: 11 минералов, 13 витаминов и омега-3",
-        "Нормы МР 2.3.1.0253-21 на основе рекомендаций ВОЗ и ФАО, проценты считает код",
-        "Подсказывает, что добрать: что съесть и что купить",
-        "Из чего посчитано сложное блюдо – прямо в карточке",
         "Неделя таблицей, нутриент по дням, месяц картинкой",
         "Таблица за 30 дней и перенос в «Здоровье» на iPhone"
       ]
@@ -98,26 +96,18 @@
         },
         {
           "@type": "Question",
-          "name": "Какой бот в Telegram считает витамины?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Нутритон – в Telegram «Ну тритон», @nu_triton_bot. Это бесплатный дневник питания, который считает не только калории, но и витамины с минералами."
-          }
-        },
-        {
-          "@type": "Question",
           "name": "По каким нормам считает бот?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "По официальному документу – МР 2.3.1.0253-21, российским нормам 2021 года, которые опираются на рекомендации ВОЗ и ФАО; учитываются пол и вес. Проценты считает код, а не нейросеть: одна и та же еда всегда даёт один процент."
+            "text": "По официальным нормам 2021 года – МР 2.3.1.0253-21; они опираются на рекомендации ВОЗ и ФАО и учитывают пол и вес. Проценты считает код, а не нейросеть: одна и та же еда всегда даёт один процент."
           }
         },
         {
           "@type": "Question",
-          "name": "Это бесплатно?",
+          "name": "Насколько точные цифры?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Да: бесплатно и без рекламы, начать можно сразу. Бот работает на бесплатных нейросетях, поэтому иногда думает секунд двадцать."
+            "text": "Это оценка. Простые продукты бот считает по официальным таблицам состава, сложные блюда оценивает ИИ – погрешность 15–25%. Поэтому важнее среднее за неделю, чем один день."
           }
         },
         {
@@ -126,6 +116,14 @@
           "acceptedAnswer": {
             "@type": "Answer",
             "text": "Нет: достаточно написать «тарелка борща» – порцию бот оценит сам. Если вес известен, назови его: названные граммы важнее оценки."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Это бесплатно?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Пока да: бесплатно и без рекламы, начать можно сразу. Бот работает на бесплатных нейросетях, поэтому иногда думает секунд двадцать."
           }
         },
         {
@@ -146,10 +144,10 @@
         },
         {
           "@type": "Question",
-          "name": "Насколько точные цифры?",
+          "name": "Какой бот в Telegram считает витамины?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Это оценка: состав блюда ИИ определяет по описанию или фото, погрешность – 15–25%. Поэтому важнее среднее за неделю, чем один день."
+            "text": "Нутритон – в Telegram «Ну тритон», @nu_triton_bot. Это дневник питания, который считает не только калории, но и витамины с минералами."
           }
         }
       ]
@@ -159,249 +157,406 @@
 </script>
 <style>
 :root {
-  --bg: #F4F1E8; --ink: #1E2A23; --ink-2: #39453E; --muted: #5C665F; --line: #DCD5C3;
-  --accent: #2E6A48; --accent-hover: #255A3C; --on-accent: #FFFFFF; --soft: #ECE7D8;
-  --paper: #F4F1E8; --chat: #0E1621; --bezel: #0D1116; --bezel-edge: #2B343E;
-  --shot-edge: rgba(14, 22, 33, .10); --shadow: rgba(30, 42, 35, .22);
-  --serif: "PT Serif", Georgia, "Times New Roman", serif;
-  --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --navy: #13324a; --green: #0f5a4a; --peach: #e0a96d; --mint: #8fd6b1; --on-mint: #0b1711;
+  --ink: #1E2A23; --ink-2: #4A564F; --muted: #6A746D; --line: #DCD5C3; --paper: #F4F1E8; --soft: #ECE7D8; --card: #FFFDF8;
+  --grad: radial-gradient(110% 60% at 90% 108%, rgba(224, 169, 109, .55), rgba(224, 169, 109, 0) 62%),
+          linear-gradient(165deg, #13324a 0%, #10424a 52%, #0f5a4a 100%);
+  --sans: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 }
-@media (prefers-color-scheme: dark) {
-  :root {
-    --bg: #0F1C16; --ink: #EEF3EF; --ink-2: #CAD7CF; --muted: #9DB1A5; --line: #25392D;
-    --accent: #6CC497; --accent-hover: #84D3AA; --on-accent: #0B1711; --soft: #13231A;
-    --bezel: #05080B; --bezel-edge: #3A4752; --shot-edge: rgba(255, 255, 255, .09); --shadow: rgba(0, 0, 0, .5);
-  }
-}
-*, *::before, *::after { box-sizing: border-box; }
-html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
-body { margin: 0; background: var(--bg); color: var(--ink); font: 17px/1.55 var(--sans); -webkit-font-smoothing: antialiased; }
-h1, h2, h3, p, figure, ol { margin: 0; }
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { -webkit-text-size-adjust: 100%; }
+body { font: 16px/1.5 var(--sans); color: var(--ink); background: var(--paper); -webkit-font-smoothing: antialiased; }
 img { display: block; max-width: 100%; height: auto; }
-a { color: var(--accent); text-underline-offset: 3px; }
-a:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; border-radius: 4px; }
-.wrap { max-width: 1080px; margin: 0 auto; padding: 0 16px; }
+a { color: inherit; }
+.wrap { max-width: 1160px; margin: 0 auto; padding: 0 20px; }
+.nb { white-space: nowrap; }
+h2 { font-weight: 800; font-size: clamp(30px, 8.4vw, 46px); line-height: 1.04; letter-spacing: -.035em; }
+.lead { margin-top: 12px; font-size: 17px; line-height: 1.45; color: var(--ink-2); max-width: 36em; }
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: 10px; height: 56px; padding: 0 26px;
+  border-radius: 16px; background: var(--mint); color: var(--on-mint); font-weight: 700; font-size: 17px;
+  text-decoration: none; box-shadow: 0 12px 30px rgba(143, 214, 177, .22); }
+.free { font-size: 15px; font-weight: 600; color: rgba(255, 255, 255, .86); }
 
-/* Первый экран – стиль B (21 ноября): зелёный фон, белый текст, телефон с перепиской и выносками */
-.hero { overflow: hidden; color: #fff; background: linear-gradient(160deg, #13324a 0%, #0f5a4a 60%, #e0a96d 140%); }
-.brand { display: flex; align-items: center; gap: 10px; padding-top: 16px; font: 700 21px/1 var(--serif); }
-.brand img { width: 40px; height: 40px; border-radius: 50%; }
-.hero-grid { display: grid; gap: 30px; padding-top: 24px; }
-h1 { font: 700 clamp(38px, 10.6vw, 66px)/1.04 var(--serif); letter-spacing: -.012em; }
-.nowrap { white-space: nowrap; }
-.lead { margin-top: 14px; max-width: 28em; font-size: clamp(18px, 4.9vw, 21px); line-height: 1.45; color: var(--ink-2); }
-.points { display: grid; gap: 8px; margin: 16px 0 0; padding: 0; list-style: none; max-width: 30em;
-  font-size: clamp(16px, 4.3vw, 18px); line-height: 1.4; color: var(--ink-2); }
-.points li { display: flex; gap: 10px; }
-.points .i { flex: none; width: 1.3em; text-align: center; }
-.points b { color: var(--ink); font-weight: 650; }
-.points li.hot { margin: 2px -12px 0; padding: 7px 12px; border-radius: 14px;
-  box-shadow: 0 0 0 2.5px var(--hot-ring, #8fd6b1); background: var(--hot-bg, rgba(143, 214, 177, .13)); }
-.trust a { color: inherit; white-space: nowrap; text-decoration: underline dotted; text-underline-offset: 3px; }
-.btn { display: inline-flex; align-items: center; justify-content: center; gap: 10px; min-height: 56px; margin-top: 22px; padding: 14px 30px;
-  border-radius: 16px; background: var(--accent); color: var(--on-accent); font-size: 19px; font-weight: 700; line-height: 1.2; text-decoration: none;
-  box-shadow: 0 12px 26px -14px var(--accent); transition: background-color .15s; }
-.btn:hover { background: var(--accent-hover); }
-.btn:focus-visible { outline: 3px solid var(--ink); outline-offset: 3px; }
-.btn svg { flex: none; }
-.hint { margin-top: 10px; font-size: 16px; color: var(--muted); }
-.hint b { color: var(--ink); font-weight: 600; -webkit-user-select: all; user-select: all; }
-.trust { margin-top: 14px; font-size: 15px; color: var(--ink-2); text-wrap: balance; }
-.trust span { white-space: nowrap; }
-.hero .lead { color: rgba(255, 255, 255, .86); }
-.hero .points { color: rgba(255, 255, 255, .84); }
-.hero .points b { color: #fff; }
-.hero .btn { background: #8fd6b1; color: #0b1711; box-shadow: 0 14px 30px -14px rgba(0, 0, 0, .65); }
-.hero .btn:hover { background: #a7e3c4; }
-.hero .btn:focus-visible, .hero a:focus-visible { outline-color: #fff; }
-.hero .hint { color: rgba(255, 255, 255, .72); }
-.hero .hint b { color: #fff; }
-.hero .trust { color: rgba(255, 255, 255, .84); }
-.hero-pic { margin: 0 -16px; padding-bottom: 8px; }
-.hero-pic img { width: 100%; filter: drop-shadow(0 26px 34px rgba(0, 0, 0, .38)); }
+/* 1. Первый экран: завтрак и числа бота на нём */
+.hero { color: #fff; background: var(--grad); overflow: hidden; }
+.top { padding-top: 14px; padding-bottom: 12px; }
+.brand { display: inline-flex; align-items: center; gap: 10px; font-weight: 700; font-size: 17px; text-decoration: none; }
+.brand img { width: 32px; height: 32px; border-radius: 9px; }
+.brand small { font-size: 14px; font-weight: 500; color: rgba(255, 255, 255, .7); }
+.hero-grid { display: grid; padding-bottom: 40px; }
+.photo { position: relative; margin: 0 -20px; aspect-ratio: 1080 / 1022; }
+.photo img { width: 100%; height: 100%; object-fit: cover; }
+.photo::after { content: ""; position: absolute; inset: 0; pointer-events: none;
+  background: linear-gradient(180deg, rgba(19, 50, 74, .55) 0%, rgba(19, 50, 74, 0) 14%, rgba(16, 66, 74, 0) 82%, rgba(16, 66, 74, .5) 100%); }
+.dish { position: absolute; z-index: 2; padding: 5px 9px 6px; border-radius: 12px; color: var(--on-mint); line-height: 1.3;
+  background: rgba(255, 255, 255, .95); box-shadow: 0 8px 20px rgba(0, 0, 0, .28); }
+.dish .dn { font-size: 11px; font-weight: 700; color: #5b6660; white-space: nowrap; }
+.dish .nv { display: flex; align-items: baseline; gap: 5px; font-size: 12px; font-weight: 600; white-space: nowrap; }
+.dish .nv b { font-size: 16px; letter-spacing: -.03em; color: var(--green); min-width: 36px; }
+.cocoa { top: 3%; left: 2.5%; }
+.egg { top: 63%; right: 2.5%; }
+.sand { bottom: 3%; left: 2.5%; }
+.hero-text { display: flex; flex-direction: column; padding-top: 22px; }
+h1 { font-weight: 800; font-size: clamp(42px, 11.4vw, 72px); line-height: .98; letter-spacing: -.045em; }
+h1 span { display: block; white-space: nowrap; color: var(--mint); }
+.count { margin-top: 12px; font-size: 17px; line-height: 1.38; color: rgba(255, 255, 255, .84); }
+.hero .cta { order: 3; display: flex; align-items: center; flex-wrap: wrap; gap: 12px 18px; margin-top: 22px; }
+.usp { order: 4; list-style: none; display: grid; gap: 10px; margin-top: 24px; }
+.usp li { display: flex; align-items: flex-start; gap: 12px; padding: 12px 14px 13px; border-radius: 16px; font-size: 15.5px;
+  line-height: 1.38; color: rgba(255, 255, 255, .74); background: rgba(255, 255, 255, .06); box-shadow: inset 0 0 0 1px rgba(255, 255, 255, .16); }
+.usp i { flex: none; width: 32px; height: 32px; border-radius: 10px; display: grid; place-items: center; font-style: normal;
+  font-size: 17px; background: rgba(143, 214, 177, .18); }
+.usp b { color: #fff; font-weight: 700; }
 
-/* Разделы ниже */
-.block { padding-top: 56px; }
-h2 { font: 700 clamp(28px, 7.4vw, 40px)/1.12 var(--serif); letter-spacing: -.006em; }
-.sub { margin-top: 10px; max-width: 40em; color: var(--muted); }
-.steps { display: grid; gap: 34px; margin-top: 26px; padding: 0; list-style: none; }
-.step-head { display: flex; align-items: center; gap: 12px; }
-.num { flex: none; display: grid; place-items: center; width: 32px; height: 32px; border-radius: 50%;
-  background: var(--accent); color: var(--on-accent); font: 700 16px/1 var(--sans); }
-.steps h3 { font-size: 20px; line-height: 1.25; }
-.steps p { margin-top: 8px; color: var(--ink-2); }
-.shot { width: 100%; margin-top: 16px; border-radius: 20px; background: #13324a;
-  box-shadow: 0 0 0 1px var(--shot-edge), 0 18px 40px -24px var(--shadow); }
-.views { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 28px 14px; margin-top: 26px; }
-.views .pond { grid-column: 1 / -1; order: -1; }
-.view img { width: 100%; border-radius: 14px; }
-.view.dark img { background: var(--chat); box-shadow: 0 0 0 1px var(--shot-edge); }
-.view.paper img { background: var(--paper); box-shadow: 0 0 0 1px var(--line); }
-.view figcaption { margin-top: 12px; font-size: 15px; line-height: 1.45; color: var(--ink-2); }
-.view figcaption b { display: block; margin-bottom: 2px; font-size: 16.5px; color: var(--ink); }
-.faq { display: grid; gap: 0 44px; margin-top: 18px; }
-.qa { padding: 16px 0; border-bottom: 1px solid var(--line); }
-.qa h3 { font-size: 17.5px; line-height: 1.3; }
-.qa p { margin-top: 5px; font-size: 16px; line-height: 1.5; color: var(--ink-2); }
-.final { margin-top: 56px; padding: 44px 0 46px; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); background: var(--soft); text-align: center; }
-.final p.lead { margin: 10px auto 0; text-wrap: balance; }
-.final .btn { margin-top: 22px; }
-footer { padding: 26px 0 44px; font-size: 15px; color: var(--muted); }
-footer .formula { color: var(--ink-2); }
-footer p + p { margin-top: 8px; }
-footer nav { display: flex; flex-wrap: wrap; gap: 8px 20px; margin-top: 16px; }
+/* общие секции */
+.sec { padding: 64px 0; }
+.sec.soft { background: var(--soft); }
+.center { text-align: center; }
+.center .lead { margin-left: auto; margin-right: auto; }
 
-@media (max-width: 480px) {
-  .btn { display: flex; width: 100%; }
-}
-@media (min-width: 600px) {
-  .wrap { padding: 0 28px; }
-  .hero-pic { margin: 0 auto; max-width: 560px; }
-}
-@media (min-width: 860px) {
-  body { font-size: 18px; }
-  .brand { padding-top: 24px; }
-  .hero-grid { grid-template-columns: minmax(0, 1.04fr) minmax(0, .96fr); align-items: center; gap: 36px; padding-top: 0; }
-  .hero-text { padding: 40px 0 56px; }
-  .hero-pic { margin: 0; padding: 18px 0 30px; justify-self: end; width: 100%; max-width: 540px; }
-  .block { padding-top: 76px; }
-  .steps { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0 30px; }
-  .steps li { display: grid; grid-row: span 3; grid-template-rows: subgrid; }
-  .views { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 30px; }
-  .views .pond { grid-column: auto; order: 0; }
-  .faq { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  .final { margin-top: 80px; }
+/* 2. Так это выглядит в Telegram: телефон с тем же завтраком */
+.stage { position: relative; text-align: left; margin-top: 28px; padding: 64px 12px 40px; border-radius: 28px; background: var(--grad);
+  display: flex; justify-content: center; }
+.phone { position: relative; width: 300px; border-radius: 46px; padding: 9px; background: #05080b; color: #fff;
+  box-shadow: 0 0 0 1.5px #2b343e, 0 30px 60px rgba(0, 0, 0, .45); }
+.phone::before { content: ""; position: absolute; top: 18px; left: 50%; width: 84px; height: 24px; margin-left: -42px;
+  border-radius: 14px; background: #000; z-index: 2; }
+.screen { border-radius: 38px; background: #0e1621; }
+.tg { display: flex; align-items: center; gap: 10px; padding: 50px 14px 10px; border-radius: 38px 38px 0 0; background: #17212b; }
+.tg img { width: 34px; height: 34px; border-radius: 50%; }
+.tg b { display: block; font-size: 14px; line-height: 1.15; }
+.tg span { font-size: 12px; color: #7d8e9e; }
+.chat { display: grid; gap: 8px; padding: 12px 10px 18px; font-size: 12.8px; line-height: 1.4; }
+.msg { max-width: 88%; padding: 7px 10px 6px; border-radius: 15px; }
+.msg.out { justify-self: end; background: #2b5278; border-bottom-right-radius: 5px; }
+.msg.in { justify-self: start; max-width: 96%; background: #182533; border-bottom-left-radius: 5px; }
+.msg p + p { margin-top: 7px; }
+.msg time { float: right; margin: 5px 0 0 8px; font-size: 10.5px; color: #8fa6bd; }
+.hl { position: relative; display: block; margin: 0 -6px; padding: 2px 6px; border-radius: 8px; box-shadow: 0 0 0 2px var(--mint); }
+.cb { display: inline-block; width: 79px; height: 7px; margin-right: 5px;
+  background: linear-gradient(90deg, var(--mint) calc(var(--n) * 8px), rgba(255, 255, 255, .22) 0);
+  -webkit-mask: repeating-linear-gradient(90deg, #000 0 6px, transparent 6px 8px);
+          mask: repeating-linear-gradient(90deg, #000 0 6px, transparent 6px 8px); }
+.stk { width: 138px; padding: 9px 12px 10px; border-radius: 16px; color: var(--ink); background: #fff; line-height: 1.2;
+  box-shadow: 0 14px 30px rgba(0, 0, 0, .3); }
+.stk b { display: block; font-size: 23px; letter-spacing: -.03em; color: var(--green); }
+.stk span { display: block; margin-top: 3px; font-size: 12.5px; font-weight: 600; color: #33463c; }
+.stk-top { position: absolute; z-index: 3; top: 22px; left: 50%; display: flex; gap: 12px; transform: translateX(-50%); }
+.stk-top .stk:first-child { transform: rotate(-2.5deg); }
+.stk-top .stk:last-child { transform: rotate(2.5deg) translateY(8px); }
+.hl .stk { display: none; }
+
+/* 3. Как это работает: путь человека */
+.flow { list-style: none; display: grid; margin-top: 28px; }
+.bubble { max-width: 94%; margin-left: auto; padding: 11px 14px; border-radius: 20px 20px 6px 20px; background: #DDF5E4;
+  font-size: 16px; line-height: 1.38; box-shadow: 0 1px 0 rgba(0, 0, 0, .06); }
+.bubble small { display: block; margin-bottom: 3px; font-size: 12px; font-weight: 700; letter-spacing: .02em;
+  text-transform: uppercase; color: #3f7d5a; }
+.step { display: flex; align-items: center; gap: 8px; height: 50px; padding-left: 22px; font-size: 14px; font-weight: 700; color: var(--green); }
+.step svg { flex: none; }
+.chips { list-style: none; display: flex; flex-wrap: wrap; gap: 7px; }
+.chips li { padding: 7px 11px; border-radius: 12px; background: var(--card); border: 1px solid var(--line); font-size: 14.5px; line-height: 1.2; }
+.chips b { color: var(--green); white-space: nowrap; }
+.result { padding: 14px 16px 15px; border-radius: 20px; background: var(--navy); color: #fff; }
+.kcal { display: flex; align-items: baseline; flex-wrap: wrap; gap: 10px; font-size: 15px; color: rgba(255, 255, 255, .72); }
+.kcal b { font-size: 24px; letter-spacing: -.02em; color: #fff; }
+.bar { display: grid; grid-template-columns: 74px 1fr 44px; align-items: center; gap: 10px; margin-top: 9px; font-size: 15px; }
+.bar i { height: 10px; border-radius: 6px; background: linear-gradient(90deg, var(--mint) calc(var(--p) * 1%), rgba(255, 255, 255, .16) 0); }
+.bar b { text-align: right; color: var(--mint); }
+.shop { margin-top: 12px; padding-top: 11px; border-top: 1px solid rgba(255, 255, 255, .14); font-size: 14.5px; color: var(--mint); }
+
+/* 4. Что ещё видно: три картинки одной высоты, подписи на одном уровне */
+.views { display: grid; gap: 14px; margin-top: 28px; }
+.view { display: flex; flex-direction: column; border-radius: 22px; background: #F4F1E9; box-shadow: inset 0 0 0 1px var(--line); overflow: hidden; }
+.vi { aspect-ratio: 1.2; display: grid; place-items: center; padding: 14px 14px 0; }
+.vi img { max-height: 100%; width: auto; object-fit: contain; border-radius: 12px; }
+.view figcaption { padding: 12px 16px 16px; text-align: center; font-size: 14.5px; color: var(--ink-2); }
+.view figcaption b { display: block; font-size: 17px; color: var(--ink); }
+.also { list-style: none; display: grid; gap: 8px; margin-top: 18px; }
+.also li { overflow-wrap: anywhere; display: flex; gap: 10px; align-items: flex-start; padding: 12px 13px; border-radius: 16px; background: var(--card);
+  box-shadow: inset 0 0 0 1px var(--line); font-size: 14.5px; line-height: 1.35; }
+.also i { font-style: normal; font-size: 18px; line-height: 1.2; }
+
+/* 5. Вопросы */
+.faq { display: grid; gap: 10px; margin-top: 28px; }
+.qa { padding: 16px 18px 17px; border-radius: 18px; background: var(--card); box-shadow: inset 0 0 0 1px var(--line); }
+.qa h3 { font-size: 17px; line-height: 1.3; }
+.qa p { margin-top: 6px; font-size: 15.5px; line-height: 1.5; color: var(--ink-2); }
+.qa a { color: var(--green); }
+
+/* 6. Низ: ещё раз главное и кнопка */
+.final { padding: 64px 0 60px; color: #fff; background: var(--grad); text-align: center; }
+.final .lead { margin: 12px auto 0; color: rgba(255, 255, 255, .84); }
+.pills { list-style: none; display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; margin-top: 22px; }
+.pills li { padding: 8px 13px; border-radius: 999px; font-size: 14.5px; font-weight: 600; background: rgba(255, 255, 255, .08);
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, .18); }
+.final .cta { display: flex; flex-direction: column; align-items: center; gap: 12px; margin-top: 26px; }
+.hint { margin-top: 10px; font-size: 14px; color: rgba(255, 255, 255, .7); }
+.example { margin-top: 18px; font-size: 15px; color: rgba(255, 255, 255, .75); }
+.example span { display: inline-block; margin: 6px 0 0 6px; padding: 9px 14px; border-radius: 18px 18px 6px 18px;
+  background: #2b5278; color: #fff; font-size: 16px; }
+.foot { padding: 46px 0 34px; font-size: 14.5px; line-height: 1.45; color: rgba(255, 255, 255, .72); background: #0d2433; }
+.foot a { color: #fff; text-decoration: none; }
+.foot-grid { display: grid; gap: 30px; }
+.foot-brand p { margin-top: 12px; max-width: 30em; }
+.foot .foot-bot { display: inline-block; margin-top: 12px; font-weight: 700; color: var(--mint); }
+.foot h3 { margin-bottom: 12px; font-size: 12.5px; font-weight: 700; letter-spacing: .07em; text-transform: uppercase; color: rgba(255, 255, 255, .5); }
+.social { list-style: none; display: flex; flex-wrap: wrap; gap: 8px; }
+.social a { display: inline-block; padding: 8px 14px; border-radius: 999px; font-weight: 600; box-shadow: inset 0 0 0 1px rgba(255, 255, 255, .24); }
+.docs { list-style: none; display: grid; gap: 9px; }
+.docs a { text-decoration: underline; text-decoration-color: rgba(255, 255, 255, .3); text-underline-offset: 3px; }
+.foot-bottom { margin-top: 32px; padding-top: 20px; border-top: 1px solid rgba(255, 255, 255, .12); font-size: 13px; color: rgba(255, 255, 255, .55); }
+.foot-bottom p + p { margin-top: 6px; }
+.foot-bottom b { color: rgba(255, 255, 255, .82); }
+
+@media (min-width: 900px) {
+  .wrap { padding: 0 32px; }
+  .top { padding-top: 24px; padding-bottom: 6px; }
+  .hero-grid { grid-template-columns: 1fr 1.02fr; gap: 56px; align-items: center; padding: 26px 0 76px; }
+  .photo { order: 2; margin: 0; border-radius: 28px; overflow: hidden; box-shadow: 0 30px 60px rgba(0, 0, 0, .35); }
+  .hero-text { order: 1; padding-top: 0; }
+  h1 { font-size: 66px; }
+  .count { margin-top: 16px; font-size: 19px; }
+  .usp { order: 3; margin-top: 26px; }
+  .usp li { font-size: 16px; }
+  .hero .cta { order: 4; margin-top: 28px; }
+  .dish { padding: 10px 14px 11px; border-radius: 16px; line-height: 1.4; }
+  .dish .dn { font-size: 13px; } .dish .nv { font-size: 15px; } .dish .nv b { font-size: 25px; min-width: 58px; }
+  .cocoa { top: 3%; left: 3%; } .egg { top: 64%; right: 3%; } .sand { bottom: 3%; left: 3%; }
+  .sec { padding: 96px 0; }
+  .lead { font-size: 19px; }
+  .stage { padding: 56px 12px 52px; }
+  .phone { width: 340px; }
+  .chat { font-size: 14px; }
+  .cb { width: 89px; height: 8px; background: linear-gradient(90deg, var(--mint) calc(var(--n) * 9px), rgba(255, 255, 255, .22) 0);
+    -webkit-mask: repeating-linear-gradient(90deg, #000 0 7px, transparent 7px 9px);
+            mask: repeating-linear-gradient(90deg, #000 0 7px, transparent 7px 9px); }
+  .stk-top { display: none; }
+  .hl .stk { display: block; position: absolute; top: 50%; width: 156px; }
+  .hl .stk b { font-size: 26px; } .hl .stk span { font-size: 13px; }
+  .stk.l { right: calc(100% + 40px); transform: translateY(-50%) rotate(-2deg); }
+  .stk.r { left: calc(100% + 40px); transform: translateY(-50%) rotate(2deg); }
+  .stk::after { content: ""; position: absolute; top: 50%; width: 14px; height: 14px; margin-top: -7px; background: #fff;
+    transform: rotate(45deg); border-radius: 2px; }
+  .stk.l::after { right: -5px; } .stk.r::after { left: -5px; }
+  .flow { grid-template-columns: 1fr 1fr 1fr; gap: 0 36px; align-items: start; }
+  .flow > li { display: flex; flex-direction: column; }
+  .flow .bubble { max-width: none; margin: 50px 0 0; }
+  .step { padding-left: 0; }
+  .flow .step svg { transform: rotate(-90deg); }
+  .views { grid-template-columns: repeat(3, 1fr); gap: 18px; }
+  .also { grid-template-columns: repeat(3, 1fr); }
+  .faq { grid-template-columns: 1fr 1fr; gap: 14px; }
+  .final { padding: 96px 0 90px; }
+  .foot-grid { grid-template-columns: 1.3fr 1fr 1fr; gap: 48px; }
 }
 </style>
 </head>
 <body>
+<header class="hero">
+  <div class="wrap top"><a class="brand" href="./"><img src="img/logo-120.webp" width="32" height="32" alt=""><span>Ну тритон <small>· бот в Telegram</small></span></a></div>
+  <div class="wrap hero-grid">
+    <figure class="photo">
+      <img src="img/zavtrak.webp" width="1080" height="1022" fetchpriority="high"
+        alt="Завтрак: два бутерброда с сёмгой и сливочным сыром, яйцо в подставке и кружка какао. На снимке – что посчитал бот: какао на молоке – 180 ккал, 28% нормы кальция и 14% магния; яйцо – 78 ккал, 16% витамина A; бутерброды с сёмгой – 370 ккал, 83% витамина B12 и 54% омега-3.">
+      <div class="dish cocoa" aria-hidden="true"><p class="dn">Какао на&nbsp;молоке · 180&nbsp;ккал</p>
+        <p class="nv"><b>28%</b>кальция</p><p class="nv"><b>14%</b>магния</p></div>
+      <div class="dish egg" aria-hidden="true"><p class="dn">Яйцо · 78&nbsp;ккал</p>
+        <p class="nv"><b>16%</b>витамина A</p></div>
+      <div class="dish sand" aria-hidden="true"><p class="dn">Бутерброды с&nbsp;сёмгой · 370&nbsp;ккал</p>
+        <p class="nv"><b>83%</b>витамина B12</p><p class="nv"><b>54%</b>омега-3</p></div>
+    </figure>
+    <div class="hero-text">
+      <h1>Что в&nbsp;еде, <span>кроме калорий</span></h1>
+      <p class="count">Калории и&nbsp;БЖУ, а&nbsp;ещё 13&nbsp;витаминов, 11&nbsp;минералов и&nbsp;омега-3</p>
+      <ul class="usp">
+        <li><i aria-hidden="true">🛒</i><span><b>Подскажет, что съесть и&nbsp;что купить,</b> чтобы добрать то, чего за&nbsp;день мало</span></li>
+        <li><i aria-hidden="true">🛡</i><span><b>Официальные нормы на&nbsp;основе ВОЗ.</b> ИИ разбирает еду, а&nbsp;проценты считает&nbsp;код</span></li>
+        <li><i aria-hidden="true">🎙</i><span><b>Весь день&nbsp;– одним голосовым.</b> Можно фото или текстом. Без взвешиваний и&nbsp;поиска продуктов&nbsp;– бот разложит сам</span></li>
+      </ul>
+      <div class="cta">
+        <a class="btn" data-bot href="https://t.me/nu_triton_bot?start=site"><svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M20.7 3.4 2.9 10.3c-1.2.5-1.2 1.2-.2 1.5l4.6 1.4 1.8 5.4c.2.6.1.8.7.8.5 0 .7-.2 1-.5l2.2-2.2 4.6 3.4c.8.5 1.5.2 1.7-.8l3-14.2c.3-1.2-.5-1.8-1.6-1.3ZM8.1 13.1l9.9-6.2c.5-.3.9-.1.6.2l-8.5 7.7-.3 3.6-1.7-5.3Z"/></svg>Открыть в&nbsp;Telegram</a>
+        <span class="free">🎁 Пока бесплатно</span>
+      </div>
+    </div>
+  </div>
+</header>
+
 <main>
-  <section class="hero">
+  <section class="sec" aria-labelledby="tg">
+    <div class="wrap center">
+      <h2 id="tg">Так это выглядит в&nbsp;Telegram</h2>
+      <p class="lead">Пишешь как другу&nbsp;– бот отвечает карточкой: продукты с&nbsp;граммами, калории и&nbsp;всё, что кроме них.</p>
+      <div class="stage">
+        <div class="stk-top" aria-hidden="true"><p class="stk"><b>370&nbsp;ккал</b><span>и&nbsp;19&nbsp;г белка</span></p><p class="stk"><b>83%</b><span>нормы B12 за&nbsp;завтрак</span></p></div>
+        <div class="phone"><div class="screen">
+          <div class="tg"><img src="img/logo-120.webp" width="34" height="34" alt=""><div><b>Ну тритон</b><span>бот</span></div></div>
+          <div class="chat">
+            <p class="msg out">на завтрак два бутерброда с&nbsp;сёмгой и&nbsp;сливочным сыром<time>09:05</time></p>
+            <div class="msg in">
+              <p>Сёмга со&nbsp;сливочным сыром на&nbsp;завтрак&nbsp;– это всегда маленькое торжество вкуса. Отличный старт выходного дня.</p>
+              <p>🍳 Что съедено на&nbsp;завтрак</p>
+              <p>• Хлеб ~60&nbsp;г<br>• Сливочный сыр ~40&nbsp;г<br>• Сёмга слабосолёная ~60&nbsp;г<br>всего ~160&nbsp;г · порция на&nbsp;глаз</p>
+              <p><span class="hl">🔥 370&nbsp;ккал · Б&nbsp;19&nbsp;г · Ж&nbsp;22&nbsp;г · У&nbsp;26&nbsp;г<span class="stk l" aria-hidden="true"><b>370&nbsp;ккал</b><span>и&nbsp;19&nbsp;г белка</span></span></span>🌾 Клетчатка 2,5&nbsp;г · 🧂 Соль 1,6&nbsp;г</p>
+              <p>▣ эта еда · кубик&nbsp;– 10% нормы<br><span class="hl"><i class="cb" style="--n:8"></i>B12 · 83%<span class="stk r" aria-hidden="true"><b>83%</b><span>нормы B12 за&nbsp;один завтрак</span></span></span><i class="cb" style="--n:5"></i>Омега-3 · 54%<br><i class="cb" style="--n:3"></i>Витамин D · 36%</p>
+              <p>✨ Астаксантин из&nbsp;лосося</p>
+              <p>Завтрак дал больше половины дневной нормы витамина B12&nbsp;– для одного приёма это много.<time>09:05</time></p>
+            </div>
+          </div>
+        </div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec soft" aria-labelledby="how">
     <div class="wrap">
-      <div class="brand"><img src="img/logo-120.webp" width="40" height="40" alt=""><span>Ну тритон</span></div>
-      <div class="hero-grid">
-        <div class="hero-text">
-          <h1>Что в еде, <span class="nowrap">кроме калорий</span></h1>
-          <p class="lead">Дневник питания в Telegram: считает калории, а ещё витамины и минералы.</p>
-          <ul class="points">
-            <li><span class="i" aria-hidden="true">🎙</span><span><b>Весь день – одним голосовым.</b> Можно и текстом, и фото.</span></li>
-            <li class="hot"><span class="i" aria-hidden="true">💡</span><span><b>Подскажет, что добрать</b> – что съесть и что купить.</span></li>
+      <h2 id="how">Как это работает</h2>
+      <p class="lead">Одна фраза&nbsp;– и&nbsp;бот разложит еду по&nbsp;граммам и&nbsp;витаминам.</p>
+      <ol class="flow">
+        <li>
+          <p class="bubble"><small>Пишешь или говоришь</small>на завтрак овсянка 250&nbsp;г на&nbsp;молоке с&nbsp;бананом, горстью кешью и&nbsp;грецких орехов и&nbsp;ложкой мёда</p>
+        </li>
+        <li>
+          <p class="step"><svg width="22" height="30" viewBox="0 0 22 30" aria-hidden="true"><path d="M4 2c9 6 11 14 7 24m0 0-5-5m5 5 5-5" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Бот разложил по&nbsp;продуктам</p>
+          <ul class="chips">
+            <li>Овсянка на&nbsp;молоке <b>250&nbsp;г</b></li><li>Молоко <b>100&nbsp;мл</b></li><li>Банан <b>100&nbsp;г</b></li>
+            <li>Кешью <b>15&nbsp;г</b></li><li>Грецкие орехи <b>15&nbsp;г</b></li><li>Мёд <b>20&nbsp;г</b></li>
           </ul>
-          <a class="btn" data-bot href="https://t.me/nu_triton_bot?start=site"><svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M20.7 3.4 2.9 10.3c-1.2.5-1.2 1.2-.2 1.5l4.6 1.4 1.8 5.4c.2.6.1.8.7.8.5 0 .7-.2 1-.5l2.2-2.2 4.6 3.4c.8.5 1.5.2 1.7-.8l3-14.2c.3-1.2-.5-1.8-1.6-1.3ZM8.1 13.1l9.9-6.2c.5-.3.9-.1.6.2l-8.5 7.7-.3 3.6-1.7-5.3Z"/></svg>Открыть в Telegram</a>
-          <p class="hint">или найди <b>@nu_triton_bot</b></p>
-          <p class="trust"><span>Бесплатно</span> · <span>без рекламы</span> · <a href="#normy">нормы на основе рекомендаций ВОЗ</a></p>
-        </div>
-        <figure class="hero-pic">
-          <img src="img/b-hero.webp" width="1080" height="1216" fetchpriority="high"
-            alt="Переписка с ботом «Ну тритон» в Telegram: на сообщение «на обед гречка 200 г с отварной куриной грудкой 150 г и огурец» бот прислал карточку – гречка, куриная грудка и огурец отдельными строками, 468 ккал, 54 г белка, магний 47% нормы, железо 36% нормы женщины. Выноски: «468 ккал и 54 г белка», «Магний – почти половина нормы».">
+        </li>
+        <li>
+          <p class="step"><svg width="22" height="30" viewBox="0 0 22 30" aria-hidden="true"><path d="M4 2c9 6 11 14 7 24m0 0-5-5m5 5 5-5" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>И&nbsp;посчитал, что внутри</p>
+          <div class="result">
+            <p class="kcal"><b>558&nbsp;ккал</b>Б&nbsp;17 · Ж&nbsp;20 · У&nbsp;78&nbsp;г</p>
+            <p class="bar"><span>Омега-3</span><i style="--p:54"></i><b>54%</b></p>
+            <p class="bar"><span>Магний</span><i style="--p:31"></i><b>31%</b></p>
+            <p class="bar"><span>Калий</span><i style="--p:18"></i><b>18%</b></p>
+            <p class="shop">🛒 А&nbsp;потом подскажет, что съесть и&nbsp;что купить, чтобы добрать</p>
+          </div>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="sec" aria-labelledby="more">
+    <div class="wrap">
+      <h2 id="more">Что ещё видно</h2>
+      <p class="lead">Всё по&nbsp;кнопке, когда захочется.</p>
+      <div class="views">
+        <figure class="view">
+          <div class="vi"><img src="img/kcal-gory.webp" width="1080" height="860" loading="lazy" decoding="async"
+            alt="Калории по дням горами: вершина – день, снежная шапка – выше нормы, озеро – день без записей"></div>
+          <figcaption><b>Калории по&nbsp;дням&nbsp;– горами</b>Снежная шапка&nbsp;– выше нормы</figcaption>
+        </figure>
+        <figure class="view">
+          <div class="vi"><img src="img/pond.webp" width="1080" height="860" loading="lazy" decoding="async"
+            alt="Магний по дням прудом: в дни, когда норма набрана, кувшинка расцветает над водой"></div>
+          <figcaption><b>Нутриент по&nbsp;дням&nbsp;– прудом</b>Кувшинка расцвела&nbsp;– норма набрана</figcaption>
+        </figure>
+        <figure class="view">
+          <div class="vi"><img src="img/month.webp" width="1080" height="984" loading="lazy" decoding="async"
+            alt="Картинка «Твой октябрь»: календарь дней с записями, лучший день и рекорды месяца"></div>
+          <figcaption><b>Месяц&nbsp;– одной картинкой</b>Дни с&nbsp;записями и&nbsp;рекорды</figcaption>
         </figure>
       </div>
+      <ul class="also">
+        <li><i aria-hidden="true">☀️</i>Утром&nbsp;– итог вчерашнего дня</li>
+        <li><i aria-hidden="true">📅</i>Неделя&nbsp;– таблицей, по&nbsp;дням и&nbsp;в&nbsp;среднем</li>
+        <li><i aria-hidden="true">💧</i>Вода и&nbsp;добавки&nbsp;– в&nbsp;том же дневнике</li>
+        <li><i aria-hidden="true">📲</i>День&nbsp;– в&nbsp;«Здоровье» на&nbsp;iPhone</li>
+        <li><i aria-hidden="true">🔎</i>В&nbsp;любом чате: «@nu_triton_bot гречка»</li>
+        <li><i aria-hidden="true">📤</i>Таблица за&nbsp;30&nbsp;дней, удалить всё&nbsp;– одной командой</li>
+      </ul>
     </div>
   </section>
 
-  <section class="block wrap" aria-labelledby="how">
-    <h2 id="how">Как это работает</h2>
-    <ol class="steps">
-      <li>
-        <div class="step-head"><span class="num" aria-hidden="true">1</span><h3>Рассказываешь, что ешь</h3></div>
-        <p>Текстом, голосом или фото – как удобно. Бот разложит фразу по продуктам с граммами, а весь день – по приёмам.</p>
-        <img class="shot" src="img/b-step-say.webp" width="900" height="1102" loading="lazy" decoding="async"
-          alt="Переписка с ботом: на «на завтрак овсянка 250 г на молоке с бананом, горстью кешью и грецких орехов и ложкой мёда» бот записал завтрак шестью строками – овсянка на молоке, молоко, банан, кешью, грецкие орехи и мёд, у каждого свои граммы. Выноска: «Одна фраза – шесть продуктов».">
-      </li>
-      <li>
-        <div class="step-head"><span class="num" aria-hidden="true">2</span><h3>Бот считает</h3></div>
-        <p>Калории, белок и 25 нутриентов – в процентах от дневной нормы. У сложного блюда видно, из чего посчитано.</p>
-        <img class="shot" src="img/b-step-count.webp" width="900" height="1102" loading="lazy" decoding="async"
-          alt="Карточка на «на ужин селёдка под шубой 200 г»: из чего посчитано – сельдь, картофель, морковь, свёкла, яйцо, майонез; 380 ккал; витамин B12 – 133% нормы, норма на сегодня закрыта. Выноски: «Из чего посчитано», «B12 – 133% нормы».">
-      </li>
-      <li>
-        <div class="step-head"><span class="num" aria-hidden="true">3</span><h3>Подскажет, что добрать</h3></div>
-        <p>Видно, чего за день мало, – и что съесть или купить, чтобы добрать. Добавки бот не советует и не продаёт.</p>
-        <img class="shot" src="img/b-step-shop.webp" width="900" height="1102" loading="lazy" decoding="async"
-          alt="Экран «Что купить»: под то, чего сегодня мало – калий, магний, омега-3, – в корзину курага, минтай, миндаль, шпроты, горбуша, овсяные хлопья, банан и ржаной хлеб; что приготовить – минтай в томатном соусе, овсяная каша с бананом, бутерброды со шпротами. Выноски: «Что купить – списком», «Что приготовить».">
-      </li>
-    </ol>
-  </section>
-
-  <section class="block wrap" aria-labelledby="more">
-    <h2 id="more">Что ещё видно</h2>
-    <p class="sub">Утром бот присылает итог вчерашнего дня, остальное – по кнопке, когда захочется.</p>
-    <div class="views">
-      <figure class="view dark week">
-        <img src="img/week.webp" width="640" height="600" loading="lazy" decoding="async"
-          alt="Нутриенты недели таблицей: калории, белок, железо и магний по дням и в среднем; зелёный кружок – норма набрана">
-        <figcaption><b>Неделя – таблицей</b>По дням и в среднем.</figcaption>
-      </figure>
-      <figure class="view paper pond">
-        <img src="img/pond.webp" width="720" height="573" loading="lazy" decoding="async"
-          alt="Магний по дням прудом: в дни, когда норма набрана, кувшинка расцветает над водой">
-        <figcaption><b>Нутриент по дням – прудом</b>Дотянулась кувшинка до поверхности – норма набрана. Можно и столбиками.</figcaption>
-      </figure>
-      <figure class="view paper month">
-        <img src="img/month.webp" width="640" height="584" loading="lazy" decoding="async"
-          alt="Картинка «Твой октябрь»: календарь дней с записями, лучший день и рекорды месяца">
-        <figcaption><b>Месяц – одной картинкой</b>Дни с записями и рекорды.</figcaption>
-      </figure>
-    </div>
-  </section>
-
-  <section class="block wrap" aria-labelledby="faq">
-    <h2 id="faq">Вопросы и ответы</h2>
-    <div class="faq">
+  <section class="sec soft" aria-labelledby="faq">
+    <div class="wrap">
+      <h2 id="faq">Вопросы и&nbsp;ответы</h2>
+      <div class="faq">
       <div class="qa">
-        <h3>Как узнать, сколько витаминов и минералов в еде?</h3>
-        <p>Написать боту @nu_triton_bot в Telegram, что было на тарелке, – он покажет витамины и минералы в процентах от дневной нормы. Всего 25 нутриентов: 11 минералов, 13 витаминов и омега-3.</p>
-      </div>
-      <div class="qa">
-        <h3>Какой бот в Telegram считает витамины?</h3>
-        <p>Нутритон – в Telegram «Ну тритон», @nu_triton_bot. Это бесплатный дневник питания, который считает не только калории, но и витамины с минералами.</p>
+        <h3>Как узнать, сколько витаминов и минералов в еде?</h3>
+        <p>Написать боту @nu_triton_bot в Telegram, что было на тарелке, – он покажет витамины и минералы в процентах от дневной нормы. Всего 25 нутриентов: 11 минералов, 13 витаминов и омега-3.</p>
       </div>
       <div class="qa" id="normy">
         <h3>По каким нормам считает бот?</h3>
-        <p>По официальному документу – <a href="https://legalacts.ru/doc/mr-2310253-21-231-gigiena-gigiena-pitanija-ratsionalnoe-pitanie-normy/" rel="noopener">МР 2.3.1.0253-21</a>, российским нормам 2021 года, которые опираются на рекомендации ВОЗ и ФАО; учитываются пол и вес. Проценты считает код, а не нейросеть: одна и та же еда всегда даёт один процент.</p>
-      </div>
-      <div class="qa">
-        <h3>Это бесплатно?</h3>
-        <p>Да: бесплатно и без рекламы, начать можно сразу. Бот работает на бесплатных нейросетях, поэтому иногда думает секунд двадцать.</p>
-      </div>
-      <div class="qa">
-        <h3>Нужно ли взвешивать еду?</h3>
-        <p>Нет: достаточно написать «тарелка борща» – порцию бот оценит сам. Если вес известен, назови его: названные граммы важнее оценки.</p>
-      </div>
-      <div class="qa">
-        <h3>Можно ли выгрузить данные?</h3>
-        <p>Да: команда /export присылает таблицу за 30 дней, а на iPhone день переносится в приложение «Здоровье». Удалить всё – команда /delete_me.</p>
-      </div>
-      <div class="qa">
-        <h3>Это медицинский сервис?</h3>
-        <p>Нет: бот оценивает, что пришло с едой, а не что происходит в организме. Диагнозов он не ставит, добавки и дозировки не назначает.</p>
+        <p>По официальным нормам 2021 года – <a href="https://legalacts.ru/doc/mr-2310253-21-231-gigiena-gigiena-pitanija-ratsionalnoe-pitanie-normy/" rel="noopener">МР 2.3.1.0253-21</a>; они опираются на рекомендации ВОЗ и ФАО и учитывают пол и вес. Проценты считает код, а не нейросеть: одна и та же еда всегда даёт один процент.</p>
       </div>
       <div class="qa">
         <h3>Насколько точные цифры?</h3>
-        <p>Это оценка: состав блюда ИИ определяет по описанию или фото, погрешность – <span class="nowrap">15–25%</span>. Поэтому важнее среднее за неделю, чем один день.</p>
+        <p>Это оценка. Простые продукты бот считает по официальным таблицам состава, сложные блюда оценивает ИИ – погрешность <span class="nb">15–25%</span>. Поэтому важнее среднее за неделю, чем один день.</p>
+      </div>
+      <div class="qa">
+        <h3>Нужно ли взвешивать еду?</h3>
+        <p>Нет: достаточно написать «тарелка борща» – порцию бот оценит сам. Если вес известен, назови его: названные граммы важнее оценки.</p>
+      </div>
+      <div class="qa">
+        <h3>Это бесплатно?</h3>
+        <p>Пока да: бесплатно и без рекламы, начать можно сразу. Бот работает на бесплатных нейросетях, поэтому иногда думает секунд двадцать.</p>
+      </div>
+      <div class="qa">
+        <h3>Можно ли выгрузить данные?</h3>
+        <p>Да: команда /export присылает таблицу за 30 дней, а на iPhone день переносится в приложение «Здоровье». Удалить всё – команда /delete_me.</p>
+      </div>
+      <div class="qa">
+        <h3>Это медицинский сервис?</h3>
+        <p>Нет: бот оценивает, что пришло с едой, а не что происходит в организме. Диагнозов он не ставит, добавки и дозировки не назначает.</p>
+      </div>
+      <div class="qa">
+        <h3>Какой бот в Telegram считает витамины?</h3>
+        <p>Нутритон – в Telegram «Ну тритон», @nu_triton_bot. Это дневник питания, который считает не только калории, но и витамины с минералами.</p>
+      </div>
       </div>
     </div>
   </section>
 
   <section class="final" aria-labelledby="try">
     <div class="wrap">
-      <h2 id="try">Что было на обед?</h2>
-      <p class="lead">Напиши или наговори боту – покажет, что в нём, кроме калорий.</p>
-      <a class="btn" data-bot href="https://t.me/nu_triton_bot?start=site"><svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M20.7 3.4 2.9 10.3c-1.2.5-1.2 1.2-.2 1.5l4.6 1.4 1.8 5.4c.2.6.1.8.7.8.5 0 .7-.2 1-.5l2.2-2.2 4.6 3.4c.8.5 1.5.2 1.7-.8l3-14.2c.3-1.2-.5-1.8-1.6-1.3ZM8.1 13.1l9.9-6.2c.5-.3.9-.1.6.2l-8.5 7.7-.3 3.6-1.7-5.3Z"/></svg>Открыть в Telegram</a>
+      <h2 id="try">Что было на&nbsp;обед?</h2>
+      <p class="lead">Напиши или наговори боту&nbsp;– покажет, что в&nbsp;нём, кроме калорий.</p>
+      <p class="example">Например: <span>на обед борщ и&nbsp;два куска хлеба</span></p>
+      <ul class="pills">
+        <li>🛒 Что съесть и&nbsp;что купить</li><li>🛡 Нормы на&nbsp;основе ВОЗ</li><li>🎙 Весь день&nbsp;– одним голосовым</li>
+      </ul>
+      <div class="cta">
+        <a class="btn" data-bot href="https://t.me/nu_triton_bot?start=site"><svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M20.7 3.4 2.9 10.3c-1.2.5-1.2 1.2-.2 1.5l4.6 1.4 1.8 5.4c.2.6.1.8.7.8.5 0 .7-.2 1-.5l2.2-2.2 4.6 3.4c.8.5 1.5.2 1.7-.8l3-14.2c.3-1.2-.5-1.8-1.6-1.3ZM8.1 13.1l9.9-6.2c.5-.3.9-.1.6.2l-8.5 7.7-.3 3.6-1.7-5.3Z"/></svg>Открыть в&nbsp;Telegram</a>
+        <span class="free">🎁 Пока бесплатно</span>
+      </div>
       <p class="hint">или найди <b>@nu_triton_bot</b></p>
     </div>
   </section>
 </main>
 
-<footer class="wrap">
-  <p class="formula"><b>Нутритон (Ну тритон), @nu_triton_bot</b> – бесплатный бот в Telegram: дневник питания, который считает витамины и минералы по нормам МР 2.3.1.0253-21.</p>
-  <p>Не медицинский сервис: бот оценивает, что пришло с едой, и диагнозов не ставит.</p>
-  <nav aria-label="Ссылки">
-    <a href="https://t.me/nu_triton">Канал @nu_triton</a>
-    <a href="https://vc.ru/life/3264397-kak-ya-vybral-imya-dlya-bota-dnevnika-pitaniya" rel="noopener">Почему «Ну тритон» – статья на vc.ru</a>
-    <a href="privacy.html">Политика конфиденциальности</a>
-    <a href="terms.html">Условия использования</a>
-  </nav>
+<footer class="foot">
+  <div class="wrap foot-grid">
+    <div class="foot-brand">
+      <a class="brand" href="./"><img src="img/logo-120.webp" width="32" height="32" alt=""><span>Ну тритон <small>· дневник питания в&nbsp;Telegram</small></span></a>
+      <p>Считает калории, а&nbsp;ещё витамины и&nbsp;минералы. Подскажет, что съесть и&nbsp;что купить. Пока бесплатно.</p>
+      <a class="foot-bot" data-bot href="https://t.me/nu_triton_bot?start=site">Открыть бота @nu_triton_bot&nbsp;→</a>
+    </div>
+    <nav class="foot-col" aria-label="Где ещё мы есть">
+      <h3>Где ещё мы есть</h3>
+      <ul class="social">
+        <li><a href="https://t.me/nu_triton">Telegram-канал</a></li>
+        <li><a href="https://vk.ru/nu_triton">ВКонтакте</a></li>
+        <li><a href="https://www.youtube.com/@nu_triton">YouTube</a></li>
+        <li><a href="https://rutube.ru/channel/18177317">Rutube</a></li>
+        <li><a href="https://dzen.ru/id/6afb2bf7be73b60e60acda76">Дзен</a></li>
+      </ul>
+    </nav>
+    <nav class="foot-col" aria-label="Документы">
+      <h3>Документы</h3>
+      <ul class="docs">
+        <li><a href="privacy.html">Политика конфиденциальности</a></li>
+        <li><a href="terms.html">Условия использования</a></li>
+        <li><a href="https://vc.ru/life/3264397-kak-ya-vybral-imya-dlya-bota-dnevnika-pitaniya" rel="noopener">Почему «Ну тритон»&nbsp;– статья на&nbsp;vc.ru</a></li>
+        <li><a href="https://legalacts.ru/doc/mr-2310253-21-231-gigiena-gigiena-pitanija-ratsionalnoe-pitanie-normy/" rel="noopener">Нормы МР&nbsp;2.3.1.0253-21</a></li>
+      </ul>
+    </nav>
+  </div>
+  <div class="wrap foot-bottom">
+    <p><b>Нутритон (Ну тритон), @nu_triton_bot</b> – бот в Telegram: дневник питания, который считает витамины и минералы по официальным нормам на основе рекомендаций ВОЗ. Пока бесплатно.</p>
+    <p>Не медицинский сервис: бот оценивает, что пришло с едой, и диагнозов не ставит.</p>
+  </div>
 </footer>
 <script>
 /* Метка источника для кнопок: ?from=метка (или utm_source=productradar) → start=метка. Без скрипта – start=site.
