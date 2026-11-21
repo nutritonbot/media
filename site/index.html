@@ -20,7 +20,7 @@
 <meta property="og:url" content="https://nu-triton.app/">
 <meta property="og:title" content="Что в еде, кроме калорий – бот «Ну тритон» в Telegram">
 <meta property="og:description" content="Считает калории, а ещё витамины и минералы. Весь день – одним голосовым. Подскажет, что добрать.">
-<meta property="og:image" content="https://nu-triton.app/img/og.jpg">
+<meta property="og:image" content="https://nutritonbot.github.io/media/site/img/og.jpg">
 <meta property="og:image:type" content="image/jpeg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
@@ -70,7 +70,8 @@
       "screenshot": [
         "https://nu-triton.app/img/b-hero.webp",
         "https://nu-triton.app/img/b-step-say.webp",
-        "https://nu-triton.app/img/b-step-count.webp"
+        "https://nu-triton.app/img/b-step-count.webp",
+        "https://nu-triton.app/img/b-step-shop.webp"
       ],
       "featureList": [
         "Еда текстом, голосом или фото",
@@ -194,6 +195,8 @@ h1 { font: 700 clamp(38px, 10.6vw, 66px)/1.04 var(--serif); letter-spacing: -.01
 .points li { display: flex; gap: 10px; }
 .points .i { flex: none; width: 1.3em; text-align: center; }
 .points b { color: var(--ink); font-weight: 650; }
+.points li.hot { margin: 2px -12px 0; padding: 7px 12px; border-radius: 14px;
+  box-shadow: 0 0 0 2.5px var(--hot-ring, #8fd6b1); background: var(--hot-bg, rgba(143, 214, 177, .13)); }
 .trust a { color: inherit; white-space: nowrap; text-decoration: underline dotted; text-underline-offset: 3px; }
 .btn { display: inline-flex; align-items: center; justify-content: center; gap: 10px; min-height: 56px; margin-top: 22px; padding: 14px 30px;
   border-radius: 16px; background: var(--accent); color: var(--on-accent); font-size: 19px; font-weight: 700; line-height: 1.2; text-decoration: none;
@@ -282,7 +285,7 @@ footer nav { display: flex; flex-wrap: wrap; gap: 8px 20px; margin-top: 16px; }
           <p class="lead">Дневник питания в Telegram: считает калории, а ещё витамины и минералы.</p>
           <ul class="points">
             <li><span class="i" aria-hidden="true">🎙</span><span><b>Весь день – одним голосовым.</b> Можно и текстом, и фото.</span></li>
-            <li><span class="i" aria-hidden="true">💡</span><span><b>Подскажет, что добрать</b> – что съесть и что купить.</span></li>
+            <li class="hot"><span class="i" aria-hidden="true">💡</span><span><b>Подскажет, что добрать</b> – что съесть и что купить.</span></li>
           </ul>
           <a class="btn" data-bot href="https://t.me/nu_triton_bot?start=site"><svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M20.7 3.4 2.9 10.3c-1.2.5-1.2 1.2-.2 1.5l4.6 1.4 1.8 5.4c.2.6.1.8.7.8.5 0 .7-.2 1-.5l2.2-2.2 4.6 3.4c.8.5 1.5.2 1.7-.8l3-14.2c.3-1.2-.5-1.8-1.6-1.3ZM8.1 13.1l9.9-6.2c.5-.3.9-.1.6.2l-8.5 7.7-.3 3.6-1.7-5.3Z"/></svg>Открыть в Telegram</a>
           <p class="hint">или найди <b>@nu_triton_bot</b></p>
@@ -312,10 +315,10 @@ footer nav { display: flex; flex-wrap: wrap; gap: 8px 20px; margin-top: 16px; }
           alt="Карточка на «на ужин селёдка под шубой 200 г»: из чего посчитано – сельдь, картофель, морковь, свёкла, яйцо, майонез; 380 ккал; витамин B12 – 133% нормы, норма на сегодня закрыта. Выноски: «Из чего посчитано», «B12 – 133% нормы».">
       </li>
       <li>
-        <div class="step-head"><span class="num" aria-hidden="true">3</span><h3>Видно, чего мало</h3></div>
-        <p>И что съесть или купить, чтобы добрать. Добавки бот не советует и не продаёт.</p>
-        <img class="shot" src="img/b-step-ideas.webp" width="900" height="1102" loading="lazy" decoding="async"
-          alt="Экран «Идеи блюд на сегодня»: под то, чего сегодня мало – магний, йод, витамин C, – на обед гречка с грибами, на ужин минтай в томатном соусе, на перекус апельсин или киви. Выноски: «Чего мало – видно», «Что съесть – готово».">
+        <div class="step-head"><span class="num" aria-hidden="true">3</span><h3>Подскажет, что добрать</h3></div>
+        <p>Видно, чего за день мало, – и что съесть или купить, чтобы добрать. Добавки бот не советует и не продаёт.</p>
+        <img class="shot" src="img/b-step-shop.webp" width="900" height="1102" loading="lazy" decoding="async"
+          alt="Экран «Что купить»: под то, чего сегодня мало – калий, магний, омега-3, – в корзину курага, минтай, миндаль, шпроты, горбуша, овсяные хлопья, банан и ржаной хлеб; что приготовить – минтай в томатном соусе, овсяная каша с бананом, бутерброды со шпротами. Выноски: «Что купить – списком», «Что приготовить».">
       </li>
     </ol>
   </section>
