@@ -9,8 +9,7 @@
 <link rel="canonical" href="https://nu-triton.app/">
 <meta name="robots" content="index, follow, max-image-preview:large">
 <meta name="color-scheme" content="light dark">
-<meta name="theme-color" content="#F4F1E8" media="(prefers-color-scheme: light)">
-<meta name="theme-color" content="#0F1C16" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#14374A">
 <meta name="format-detection" content="telephone=no">
 <link rel="icon" href="favicon.ico" sizes="48x48">
 <link rel="icon" href="img/icon-120.png" type="image/png" sizes="120x120">
@@ -69,9 +68,9 @@
       },
       "image": "https://nu-triton.app/img/og.jpg",
       "screenshot": [
-        "https://nu-triton.app/img/card-herring.webp",
-        "https://nu-triton.app/img/step-voice.webp",
-        "https://nu-triton.app/img/pond.webp"
+        "https://nu-triton.app/img/b-hero.webp",
+        "https://nu-triton.app/img/b-step-say.webp",
+        "https://nu-triton.app/img/b-step-count.webp"
       ],
       "featureList": [
         "Еда текстом, голосом или фото",
@@ -79,7 +78,7 @@
         "Калории, белки, жиры, углеводы и 25 нутриентов: 11 минералов, 13 витаминов и омега-3",
         "Нормы МР 2.3.1.0253-21 на основе рекомендаций ВОЗ и ФАО, проценты считает код",
         "Подсказывает, что добрать: что съесть и что купить",
-        "Из чего посчитано сложное блюдо – в подробном виде карточки",
+        "Из чего посчитано сложное блюдо – прямо в карточке",
         "Неделя таблицей, нутриент по дням, месяц картинкой",
         "Таблица за 30 дней и перенос в «Здоровье» на iPhone"
       ]
@@ -182,8 +181,8 @@ a { color: var(--accent); text-underline-offset: 3px; }
 a:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; border-radius: 4px; }
 .wrap { max-width: 1080px; margin: 0 auto; padding: 0 16px; }
 
-/* Первый экран */
-.hero { border-bottom: 1px solid var(--line); overflow: hidden; }
+/* Первый экран – стиль B (21 ноября): зелёный фон, белый текст, телефон с перепиской и выносками */
+.hero { overflow: hidden; color: #fff; background: linear-gradient(160deg, #13324a 0%, #0f5a4a 60%, #e0a96d 140%); }
 .brand { display: flex; align-items: center; gap: 10px; padding-top: 16px; font: 700 21px/1 var(--serif); }
 .brand img { width: 40px; height: 40px; border-radius: 50%; }
 .hero-grid { display: grid; gap: 30px; padding-top: 24px; }
@@ -206,12 +205,17 @@ h1 { font: 700 clamp(38px, 10.6vw, 66px)/1.04 var(--serif); letter-spacing: -.01
 .hint b { color: var(--ink); font-weight: 600; -webkit-user-select: all; user-select: all; }
 .trust { margin-top: 14px; font-size: 15px; color: var(--ink-2); text-wrap: balance; }
 .trust span { white-space: nowrap; }
-.phone { justify-self: center; align-self: end; width: min(330px, 88vw); padding: 10px 10px 0; background: var(--bezel);
-  border-radius: 52px 52px 0 0; box-shadow: inset 0 0 0 1.5px var(--bezel-edge), 0 26px 60px -18px var(--shadow); }
-.screen { position: relative; padding: 34px 0 14px; border-radius: 42px 42px 0 0; overflow: hidden;
-  background: linear-gradient(#17212B 0 34px, var(--chat) 34px); }
-.screen::before { content: ""; position: absolute; top: 9px; left: 50%; width: 94px; height: 26px; margin-left: -47px; border-radius: 14px; background: #000; }
-.screen img { width: 100%; }
+.hero .lead { color: rgba(255, 255, 255, .86); }
+.hero .points { color: rgba(255, 255, 255, .84); }
+.hero .points b { color: #fff; }
+.hero .btn { background: #8fd6b1; color: #0b1711; box-shadow: 0 14px 30px -14px rgba(0, 0, 0, .65); }
+.hero .btn:hover { background: #a7e3c4; }
+.hero .btn:focus-visible, .hero a:focus-visible { outline-color: #fff; }
+.hero .hint { color: rgba(255, 255, 255, .72); }
+.hero .hint b { color: #fff; }
+.hero .trust { color: rgba(255, 255, 255, .84); }
+.hero-pic { margin: 0 -16px; padding-bottom: 8px; }
+.hero-pic img { width: 100%; filter: drop-shadow(0 26px 34px rgba(0, 0, 0, .38)); }
 
 /* Разделы ниже */
 .block { padding-top: 56px; }
@@ -223,8 +227,8 @@ h2 { font: 700 clamp(28px, 7.4vw, 40px)/1.12 var(--serif); letter-spacing: -.006
   background: var(--accent); color: var(--on-accent); font: 700 16px/1 var(--sans); }
 .steps h3 { font-size: 20px; line-height: 1.25; }
 .steps p { margin-top: 8px; color: var(--ink-2); }
-.shot { width: 100%; margin-top: 16px; border-radius: 18px; background: var(--chat);
-  box-shadow: 0 0 0 1px var(--shot-edge), 0 18px 40px -26px var(--shadow); }
+.shot { width: 100%; margin-top: 16px; border-radius: 20px; background: #13324a;
+  box-shadow: 0 0 0 1px var(--shot-edge), 0 18px 40px -24px var(--shadow); }
 .views { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 28px 14px; margin-top: 26px; }
 .views .pond { grid-column: 1 / -1; order: -1; }
 .view img { width: 100%; border-radius: 14px; }
@@ -249,13 +253,14 @@ footer nav { display: flex; flex-wrap: wrap; gap: 8px 20px; margin-top: 16px; }
 }
 @media (min-width: 600px) {
   .wrap { padding: 0 28px; }
+  .hero-pic { margin: 0 auto; max-width: 560px; }
 }
 @media (min-width: 860px) {
   body { font-size: 18px; }
   .brand { padding-top: 24px; }
-  .hero-grid { grid-template-columns: minmax(0, 1.12fr) minmax(0, .88fr); align-items: end; gap: 40px; padding-top: 0; }
-  .hero-text { align-self: center; padding: 44px 0 64px; }
-  .phone { width: 350px; margin: 28px 12px 0 0; justify-self: end; }
+  .hero-grid { grid-template-columns: minmax(0, 1.04fr) minmax(0, .96fr); align-items: center; gap: 36px; padding-top: 0; }
+  .hero-text { padding: 40px 0 56px; }
+  .hero-pic { margin: 0; padding: 18px 0 30px; justify-self: end; width: 100%; max-width: 540px; }
   .block { padding-top: 76px; }
   .steps { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0 30px; }
   .steps li { display: grid; grid-row: span 3; grid-template-rows: subgrid; }
@@ -283,11 +288,9 @@ footer nav { display: flex; flex-wrap: wrap; gap: 8px 20px; margin-top: 16px; }
           <p class="hint">или найди <b>@nu_triton_bot</b></p>
           <p class="trust"><span>Бесплатно</span> · <span>без рекламы</span> · <a href="#normy">нормы на основе рекомендаций ВОЗ</a></p>
         </div>
-        <figure class="phone">
-          <div class="screen">
-            <img src="img/card-herring.webp" width="720" height="1175" fetchpriority="high"
-              alt="Ответ бота «Ну тритон» в чате Telegram на сообщение «Солёная селёдка 120 г с картошкой 200 г»: что съедено на обед – солёная сельдь и отварной картофель, 334 ккал; витамин B12 – 350% нормы, витамин D – 80%, омега-3 – 64%; соли много – около 3,6 г">
-          </div>
+        <figure class="hero-pic">
+          <img src="img/b-hero.webp" width="1080" height="1216" fetchpriority="high"
+            alt="Переписка с ботом «Ну тритон» в Telegram: на сообщение «на обед гречка 200 г с отварной куриной грудкой 150 г и огурец» бот прислал карточку – гречка, куриная грудка и огурец отдельными строками, 468 ккал, 54 г белка, магний 47% нормы, железо 36% нормы женщины. Выноски: «468 ккал и 54 г белка», «Магний – почти половина нормы».">
         </figure>
       </div>
     </div>
@@ -298,21 +301,21 @@ footer nav { display: flex; flex-wrap: wrap; gap: 8px 20px; margin-top: 16px; }
     <ol class="steps">
       <li>
         <div class="step-head"><span class="num" aria-hidden="true">1</span><h3>Рассказываешь, что ешь</h3></div>
-        <p>Текстом, голосом или фото. Весь день можно одним голосовым – бот разложит его по приёмам и покажет, как понял.</p>
-        <img class="shot" src="img/step-voice.webp" width="640" height="569" loading="lazy" decoding="async"
-          alt="Голосовое на 12 секунд: бот расслышал «утром омлет и кофе, днём борщ, нет, щи, вечером гречка с курицей граммов 150, точнее 200», разложил по приёмам и записал день">
+        <p>Текстом, голосом или фото – как удобно. Бот разложит фразу по продуктам с граммами, а весь день – по приёмам.</p>
+        <img class="shot" src="img/b-step-say.webp" width="900" height="1102" loading="lazy" decoding="async"
+          alt="Переписка с ботом: на «на завтрак овсянка 250 г на молоке с бананом, горстью кешью и грецких орехов и ложкой мёда» бот записал завтрак шестью строками – овсянка на молоке, молоко, банан, кешью, грецкие орехи и мёд, у каждого свои граммы. Выноска: «Одна фраза – шесть продуктов».">
       </li>
       <li>
         <div class="step-head"><span class="num" aria-hidden="true">2</span><h3>Бот считает</h3></div>
-        <p>Калории, белок и 25 нутриентов – в процентах от дневной нормы. Из чего посчитано блюдо, видно прямо в карточке строкой «🧾».</p>
-        <img class="shot" src="img/step-borsch.webp" width="640" height="759" loading="lazy" decoding="async"
-          alt="Подробный вид карточки на «Тарелка борща со сметаной»: борщ ~300 г и сметана ~15 г; считал так: свёкла, капуста, картофель, говядина, морковь; 210 ккал; беталаины из свёклы">
+        <p>Калории, белок и 25 нутриентов – в процентах от дневной нормы. У сложного блюда видно, из чего посчитано.</p>
+        <img class="shot" src="img/b-step-count.webp" width="900" height="1102" loading="lazy" decoding="async"
+          alt="Карточка на «на ужин селёдка под шубой 200 г»: из чего посчитано – сельдь, картофель, морковь, свёкла, яйцо, майонез; 380 ккал; витамин B12 – 133% нормы, норма на сегодня закрыта. Выноски: «Из чего посчитано», «B12 – 133% нормы».">
       </li>
       <li>
         <div class="step-head"><span class="num" aria-hidden="true">3</span><h3>Видно, чего мало</h3></div>
         <p>И что съесть или купить, чтобы добрать. Добавки бот не советует и не продаёт.</p>
-        <img class="shot" src="img/step-ideas.webp" width="640" height="550" loading="lazy" decoding="async"
-          alt="Идеи блюд под то, чего сегодня мало – магний, йод и витамин C: гречка с грибами, минтай в томатном соусе, апельсин или киви">
+        <img class="shot" src="img/b-step-ideas.webp" width="900" height="1102" loading="lazy" decoding="async"
+          alt="Экран «Идеи блюд на сегодня»: под то, чего сегодня мало – магний, йод, витамин C, – на обед гречка с грибами, на ужин минтай в томатном соусе, на перекус апельсин или киви. Выноски: «Чего мало – видно», «Что съесть – готово».">
       </li>
     </ol>
   </section>
