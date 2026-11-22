@@ -1,5 +1,6 @@
 # Ну тритон (Нутритон) – страница бота @nu_triton_bot.
-# Открыто всем поисковым и ИИ-роботам.
+# Открыто всем поисковым и ИИ-роботам. Пока нет своего домена, адрес – nutritonbot.github.io/media/site/
+# (роботы читают robots.txt только в корне сайта, этот файл – для порядка).
 
 User-agent: *
 Allow: /
@@ -9,4 +10,4 @@ User-agent: Yandex
 Allow: /
 Clean-param: from&utm_source&utm_medium&utm_campaign&utm_content&utm_term
 
-Sitemap: https://nu-triton.app/sitemap.xml
+Sitemap: https://nutritonbot.github.io/media/site/sitemap.xml
