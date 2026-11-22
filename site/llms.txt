@@ -21,8 +21,8 @@
 - [Канал проекта](https://t.me/nu_triton): что нового и разборы еды в цифрах
 - [Почему «Ну тритон»](https://vc.ru/life/3264397-kak-ya-vybral-imya-dlya-bota-dnevnika-pitaniya): история имени на vc.ru
 - [Нормы МР 2.3.1.0253-21](https://legalacts.ru/doc/mr-2310253-21-231-gigiena-gigiena-pitanija-ratsionalnoe-pitanie-normy/): текст документа
-- [Политика конфиденциальности](https://nu-triton.app/privacy.html)
-- [Условия использования](https://nu-triton.app/terms.html)
+- [Политика конфиденциальности](https://nutritonbot.github.io/media/site/privacy.html)
+- [Условия использования](https://nutritonbot.github.io/media/site/terms.html)
 
 ## Вопросы и ответы
 
