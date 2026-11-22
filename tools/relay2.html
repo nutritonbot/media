@@ -23,6 +23,12 @@ window.addEventListener('message', (e) => {
 });
 const p = new URLSearchParams(location.search);
 const to = OK_TO.includes(p.get('to')) ? p.get('to') : null;
-if (window.opener && to) { window.opener.postMessage({nt: 'ready'}, to); if (p.get('f')) send(p.get('f'), to); }
+if (window.opener && to) {
+  window.opener.postMessage({nt: 'ready'}, to);
+  // f – один файл или несколько через запятую; close=1 – закрыться самому, когда всё отдано
+  const list = (p.get('f') || '').split(',').filter(Boolean);
+  (async () => { for (const f of list) await send(f, to);
+    if (p.get('close') === '1' && list.length) { s.textContent += ' Всё отдано, окно закроется само.'; setTimeout(() => window.close(), 2000); } })();
+}
 else s.textContent = 'Окно нужно открывать кнопкой на странице Instagram или Threads.';
 </script></body></html>
