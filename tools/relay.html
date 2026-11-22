@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="ru"><head><meta charset="utf-8"><title>Ну тритон – передача файла</title>
+<style>body{font:15px/1.5 -apple-system,Segoe UI,Arial,sans-serif;margin:24px;color:#17211b;background:#eef2ec}</style></head>
+<body><p id="s">Передаю файл…</p>
+<script>
+// Передатчик для своих аккаунтов: страница Instagram или Threads открывает это окно, оно берёт наш ролик с этого же сайта
+// и отдаёт его окну-открывателю. Файлы – только с nutritonbot.github.io/media, получатели – только Instagram и Threads.
+(async () => {
+  const s = document.getElementById('s');
+  const p = new URLSearchParams(location.search);
+  const f = p.get('f') || '';
+  const OK_TO = ['https://www.instagram.com', 'https://www.threads.com', 'https://www.threads.net'];
+  const to = OK_TO.includes(p.get('to')) ? p.get('to') : null;
+  if (!/^[a-z0-9_\/.-]+$/i.test(f) || f.includes('..') || !to || !window.opener) { s.textContent = 'Нечего передавать.'; return; }
+  try {
+    const b = await fetch('https://nutritonbot.github.io/media/' + f, {cache: 'no-store'}).then(r => { if (!r.ok) throw new Error(r.status); return r.blob(); });
+    window.opener.postMessage({nt: 'file', name: f.split('/').pop(), type: b.type, blob: b}, to);
+    s.textContent = 'Передано: ' + f + ' (' + b.size + ' байт). Окно закроется само.';
+    setTimeout(() => window.close(), 1500);
+  } catch (e) { s.textContent = 'Не вышло: ' + e; }
+})();
+</script></body></html>
