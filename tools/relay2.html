@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="ru"><head><meta charset="utf-8"><title>Ну тритон – передатчик</title>
+<style>body{font:15px/1.5 -apple-system,Segoe UI,Arial,sans-serif;margin:24px;color:#17211b;background:#eef2ec}b{color:#2b7653}</style></head>
+<body><p><b>Передатчик “Ну тритон” открыт.</b> Не закрывай это окно: через него Claude загружает ролики в Instagram и Threads.</p>
+<p id="s">Жду запросов…</p>
+<script>
+// Окно открывает страница Instagram или Threads (щелчком владельца). Дальше она просит файлы, а окно берёт их с этого же сайта
+// и отдаёт обратно. Файлы – только с nutritonbot.github.io/media, получатели – только Instagram и Threads.
+const OK_TO = ['https://www.instagram.com', 'https://www.threads.com', 'https://www.threads.net'];
+const s = document.getElementById('s');
+let n = 0;
+async function send(f, to) {
+  if (!/^[a-z0-9_\/.-]+$/i.test(f) || f.includes('..')) return;
+  try {
+    const b = await fetch('https://nutritonbot.github.io/media/' + f, {cache: 'no-store'}).then(r => { if (!r.ok) throw new Error(r.status); return r.blob(); });
+    window.opener.postMessage({nt: 'file', name: f.split('/').pop(), path: f, type: b.type, blob: b}, to);
+    n++; s.textContent = 'Передано файлов: ' + n + ' (последний – ' + f + ').';
+  } catch (e) { window.opener.postMessage({nt: 'error', path: f, error: String(e)}, to); s.textContent = 'Не вышло: ' + f + ' – ' + e; }
+}
+window.addEventListener('message', (e) => {
+  if (!OK_TO.includes(e.origin) || !e.data || e.data.nt !== 'want' || e.source !== window.opener) return;
+  send(String(e.data.path || ''), e.origin);
+});
+const p = new URLSearchParams(location.search);
+const to = OK_TO.includes(p.get('to')) ? p.get('to') : null;
+if (window.opener && to) { window.opener.postMessage({nt: 'ready'}, to); if (p.get('f')) send(p.get('f'), to); }
+else s.textContent = 'Окно нужно открывать кнопкой на странице Instagram или Threads.';
+</script></body></html>
